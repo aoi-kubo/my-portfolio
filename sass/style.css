@@ -206,7 +206,7 @@
 
 .mv {
   margin-top: 85px;
-  background: url(../img/mv.mv2.jpg) center/cover;
+  background: url(../img/mv.mv2.jpg) center top /contain no-repeat;
   height: 600px;
   position: relative;
 }
@@ -429,6 +429,9 @@
   }
   #hamburger {
     display: block;
+  }
+  .mv {
+    background: url(../img/mv.mv2.jpg) center / cover;
   }
   .service.flex {
     display: block;
