@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="aoi kubo" />
+  <meta name="description" content="久保碧衣のポートフォリオ" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,400,500&display=swap&subset=japanese" rel="stylesheet" />
+  <title>King W Stone | portfolio site</title>
+  <link rel="shortcut icon" href="./img/favicon.ico"/>	
+  <link rel="stylesheet" href="https://tomap.co/ZP_reset.css" />
+  <link rel="stylesheet" href="sass/style.css" media="all" />
+</head>
+<body class="body">
+  <!-- topに戻る -->
+  <div id="back-to-top"></div>
+
+  <!-- header -->
+  <header class="header">
+    <div class="flex inner">
+      <h1 class="header-logo"><a href="index.html"><img src="./img/logo-main.gray.png" alt="ロゴの写真"></a></h1>
+      <nav class="header-nav">
+        <ul class="flex">
+          <li><a href="#service">service</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <!-- タイピング風 -->
+  <div class="mv">
+    <div class="mv-content">
+      <h2><span class="mv-text"></span></h2>
+    </div>
+  </div>
+  <!-- service -->
+  <div class="service inner inner-content slide-trigger" id="service">
+    <h3 class="title">SERVICE</h3>
+    <div class="flex flex-direction">
+      <div class="service-content service-first slide slideTop">
+        <h4 class="service-content-title">コーディング</h4>
+        <img src="./img/プログラムアイコン.png" alt="コーディング写真">
+        <p class="service-content-text">
+          HTML・CSS・Javascript (jQuery) を使用したwebサイトの制作が可能です。シンプルでわかりやすく、かつ動きがあるサイトをつくることが得意です。
+        </p>
+      </div>
+      <div class="service-content service-second slide slideBottom">
+        <h4 class="service-content-title">デザイン</h4>
+        <img src="img/パレットのフリーアイコン7.png" alt="デザインの写真">
+        <p class="service-content-text">
+          主に、Adobeソフトを使った写真加工・Webサイトのデザインができます。最新のトレンドを取り入れながら、クライアント様の趣旨に沿ったデザインを提供するように心がけています。
+        </p>
+      </div>
+      <div class="service-content service-third slide slideTop">
+        <h4 class="service-content-title">レスポンシブ化</h4>
+        <img src="./img/iPhone風のスマートフォンのアイコン素材.png" alt="スマートフォン">
+        <p class="service-content-text">
+          パソコン以外にも、タブレットやスマートフォン等、どの端末で閲覧しても対応できるよう、レイアウト崩れが起こらないようにコーディングいたします。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- about -->
+  <div class="about inner inner-content" id="about">
+    <h3 class="title">ABOUT</h3>
+    <div class="flex about-inner slide-trigger">
+      <div class="about-img slide slideLeft">
+        <img src="./img/UTNX3112.PNG" alt="イメージ画像">
+      </div>
+      <div class="about-text slide slideRight">
+        <p>
+          <span>AOI KUBO</span><br>
+          はじめまして。ご覧いただきありがとうございます。<br>
+          久保碧衣と申します。<br>
+          現在、大学3年生で、国際関係とメディアについて学んでいます。<br>
+          自粛生活の中で新しいことに挑戦しようと思い<br>
+          プログラミングを始めました。<br>
+          作品を見た人の心を少しでも動かせるような<br>
+          モノづくりを創作できるように日々精進しています。<br>
+          よろしくお願いいたします。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio inner inner-content slide-trigger" id="portfolio">
+    <h3 class="title">PORTFOLIO</h3>
+    <div class="portfolio-nem flex">
+      <img src="./img/nem.png" alt="nemの写真" class="slide slideBottom">
+      <p class="slide slideBottom">使用言語：HTML・CSS・JavaScript・PHP<br>
+        今年のトレンドとも言われるNeumorphism（ニューモーフィズム）で簡単な自分のポートフォリオサイトを作成しました。
+      </p>
+    </div>
+    <a href="https://github.com/aoi-kubo" class="btn">Github</a>
+    <div class="portfolio-cor flex">
+      <p class=" slide slideTop">使用言語：HTML・CSS<br>
+        友人の新しいブランドのイメージホームページを作成しました。横向きのホームページをJavaScript・JQueryを使用せずにCSSのみで作り上げました。
+      </p>
+      <img src="./img/cor.png" alt="corの写真" class=" slide slideTop">
+    </div>
+  </div>
+  <div class="contact inner inner-content" id="contact">
+    <h3 class="title">CONTACT</h3>
+    <form action="#" method="">
+      <table class="contact-form">
+        <tr>
+          <th>名前：</th>
+          <td><input type="text" name="fullname" placeholder="name" required="" /></td>
+        </tr>
+        <tr>
+          <th>メール：</th>
+          <td><input type="email" name="" placeholder="email" /></td>
+        </tr>
+        <tr>
+          <th>お問い合わせ内容：</th>
+          <td><textarea name="" rows="15" cols="50" placeholder="message"></textarea></td>
+        </tr>
+      </table>
+      <input type="submit" class="btn-submit" value="送信" />
+    </form>
+  </div>
+  <!-- jQueryの読み込み（CDN） -->
+
+  <footer class="footer inner-content"><small>&copy; 2021 King W Stone</small></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+  <!-- jsの読み込み -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

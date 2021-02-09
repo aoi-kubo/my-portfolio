@@ -1,0 +1,517 @@
+.body {
+  color: #333;
+  background: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.body.hidden {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.inner {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5% 0;
+  box-sizing: border-box;
+}
+.inner-content {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  padding-bottom: 3%;
+  font-weight: bold;
+  position: relative;
+}
+
+.slideLeft {
+  transform: translateX(-200px);
+}
+.slideRight {
+  transform: translateX(180px);
+}
+.slideBottom {
+  transform: translateY(300px);
+}
+.slideTop {
+  transform: translateY(-300px);
+}
+
+.slide {
+  opacity: 0;
+  transition: 2s ease-out;
+  &.in {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+// top
+
+#back-to-top {
+  width: 50px;
+  height: 50px;
+  background: rgb(100, 100, 100);
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: -100px;
+  z-index: 100;
+  opacity: 0.3;
+  transition: 0.4s;
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
+  &.in {
+    right: 20px;
+  }
+}
+
+
+// header
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  &.fix {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: #fffd;
+  }
+  &-logo img {
+    width: 50%;
+  }
+  .inner.flex {
+    width: 98.5vw;
+    align-items: center;
+    padding: 10px 3%;
+    position: relative;
+  }
+  &-nav li {
+    margin: 0 35px;
+    transition: 0.3s;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:hover:nth-child(1){
+      color: rgb(126, 104, 224);
+    }
+    &:hover:nth-child(2) {
+      color: rgb(233, 178, 60);
+    }
+    &:hover:nth-child(3) {
+      color: rgb(70, 175, 57);
+    }
+    &:hover:nth-child(4) {
+      color: rgb(205, 81, 216);
+    }
+  }
+  
+}
+
+
+#hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+  &:hover{
+    span:nth-child(2) {
+      left: 15px;
+    }
+  }
+  span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: #333;
+    position: absolute;
+    left: 10px;
+    transition: 0.3s;
+    &:nth-child(1) {
+      top: 10px;
+    }
+    &:nth-child(2) {
+      top: 20px;
+    }
+    &:nth-child(3) {
+      top: 30px;
+    }
+  }
+}
+#hamburger.active {
+  span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+  span:nth-child(2) {
+    left: 30px;
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+}
+
+// mv
+.mv {
+  margin-top: 85px;
+  background: url(../img/mv.mv2.jpg) center / cover;
+  height: 600px;
+  position: relative;
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      color: rgb(248, 248, 248);
+      font-size: 3rem;
+      letter-spacing: 1.3px;
+    }
+  }
+  &-text {
+    &::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  50% {opacity: 0.5;}
+}
+
+.service {
+  padding-top: 10%;
+  &-content {
+    width: 28%;
+    padding: 40px 20px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 15%;
+      left: 22%;
+      z-index: -1;
+    }
+    img {
+      width: 30%;
+    }
+    &-title {
+      margin-bottom: 30px;
+      letter-spacing: 1.3px;
+    }
+    &-text {
+      margin-top: 30px;
+      font-size: 1.08rem;
+    }
+  }
+  &-first::before {
+    content: url(../img/watercolor-4629348_640-3.png);
+  }
+  &-second::before {
+    content: url(../img/watercolor-4629348_640-2.png);
+  }
+  &-third::before {
+    content: url(../img/watercolor-4629348_640-1.png);
+  }
+  &-first, &-third {
+    padding-bottom: 66px;
+  }
+}
+
+
+// about
+.about {
+  &.inner {
+    width: 70%;
+  }
+  &-inner {
+    padding-top: 20px;
+  }
+  .flex {
+    align-items: center;
+  }
+  &-text {
+    font-size: 1rem;
+    line-height: 2;
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: rgb(119, 119, 119);
+    }
+  }
+}
+
+
+// portfolio
+.portfolio {
+  .btn {
+    display: inline-block;
+    padding: .75em 4em;
+    border: 2px solid #333;
+    border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
+    color: #333;
+    text-decoration: none;
+    margin: 30px 0;
+    &:hover {
+      background-color: #333;
+      color: #fffd;
+    }
+  }
+  .flex {
+    justify-content: center;
+    align-items: center;
+  }
+  &-nem, &-cor {
+    padding: 30px 40px;
+  }
+  &-nem img, &-cor img {
+    width: 40%;
+  }
+  &-nem p, &-cor p {
+    width: 40%;
+    margin: 0 30px;
+    font-size: 1.1rem;
+    align-items: center;
+    padding: 60px 0;
+    position: relative;
+  }
+  &-nem p, &-cor p {
+    &::before {
+      top: 0;
+      left: 20px;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  &-nem p {
+    &::before {
+      content: url(../img/green.jpg);
+    }
+  }
+  &-cor p {
+    &::before {
+      content: url(../img/yellow.jpg);
+    }
+  }
+  
+  
+}
+
+
+// contact
+.contact {
+  // background: url(../img/dan-cristian-padure-hguxpsaUpBk-unsplash.jpg) 80% 80% / 80%;
+  &-form {
+    width: 70%;
+    margin: 40px auto;
+  }
+}
+.contact-form th {
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.contact-form input {
+  height: 30px;
+}
+.btn-submit{
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 200px;
+  height: 60px;
+  display: inline-block;
+  padding: 0.6em 2em;
+  margin: 0 0 1em;
+  background: #fff;
+  border: 0.1875em solid rgba(221, 123, 221, 0.897);
+  color: rgba(56, 56, 56, 0.897);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background: rgba(221, 123, 221, 0.897);
+    color: #fff;
+  }
+}
+
+.footer {
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 896px) {
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    background: #fff;
+    font-size: 2rem;
+    display: none;
+    li:last-child {
+      margin-right: 35px;
+    }
+    ul.flex {
+      display: block;
+      line-height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+  #hamburger {
+    display: block;
+  }
+  .service {
+    &.flex {
+      display: block;
+    }
+    &-content {
+      width: 41%;
+      padding-bottom: 0;
+      &::before {
+        left: 20%;
+        top: 16%;
+      }
+      &-title {
+        font-size: 1.6rem;
+      }
+      &-text {
+        font-size: 1.23rem;
+      }
+    }
+  }
+  .about {
+    .flex {
+      justify-content: center;
+    }
+    &.inner {
+      width: 85%;
+    }
+    &-img, &-text {
+      width: 50%;
+    }
+    &-text {
+      font-size: 0.85rem;
+    }
+  }
+  .portfolio {
+    &-nem img, &-cor img {
+      width: 80%;
+    }
+    &-nem p, &-cor p {
+      transform: scale(0.8);
+      padding: 30px 0;
+      &::before {
+        left: -25%;
+      }
+    }
+  }
+  .contact {
+    &-form th {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mv {
+    margin-top: 70px;
+    background: url(../img/mv.mv2.jpg) center / auto;
+    height: 420px;
+  }
+  .service {
+    &-content {
+      width: 100%;
+      &-text {
+        font-size: 0.75rem;
+      }
+      &::before {
+        transform: scale(0.9);
+        top: 22%;
+        left: 21%;
+      }
+    }
+  }
+  .about {
+    &-img, &-text {
+      width: 100%;
+    }
+    &-text {
+      font-size: 0.8rem;
+    }
+  }
+  .portfolio {
+    .btn {
+      margin: 0 auto;
+    }
+    .flex {
+      display: block;
+    }
+    &-nem, &-cor {
+      padding: 10px 2px;
+    }
+    &-nem img, &-nem p, &-cor img, &-cor p {
+     width: 85%;
+    }
+    &-nem p, &-cor p {
+      transform: scale(0.7);
+      &::before {
+        left: -17%;
+      }
+    }
+  }
+  .contact {
+    text-align: center;
+    &-form {
+      width: 90%;
+      margin: 40px auto 20px;
+      font-size: 0.8rem;
+    }
+  }
+}
