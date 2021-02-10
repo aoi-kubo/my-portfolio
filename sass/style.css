@@ -38,11 +38,11 @@
 }
 
 .slideLeft {
-  transform: translateX(-200px);
+  transform: translateX(-50px);
 }
 
 .slideRight {
-  transform: translateX(180px);
+  transform: translateX(50px);
 }
 
 .slideBottom {
@@ -351,11 +351,11 @@
 }
 
 .portfolio-nem p::before {
-  content: url(../img/green.jpg);
+  content: url(../img/green.png);
 }
 
 .portfolio-cor p::before {
-  content: url(../img/yellow.jpg);
+  content: url(../img/yellow.png);
 }
 
 .contact-form {
@@ -501,7 +501,7 @@
     font-size: 0.8rem;
   }
   .portfolio .btn {
-    margin: 5px auto;
+    margin: 3px auto;
   }
   .portfolio .flex {
     display: block;

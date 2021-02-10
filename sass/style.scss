@@ -36,10 +36,10 @@
 }
 
 .slideLeft {
-  transform: translateX(-200px);
+  transform: translateX(-50px);
 }
 .slideRight {
-  transform: translateX(180px);
+  transform: translateX(50px);
 }
 .slideBottom {
   transform: translateY(300px);
@@ -323,12 +323,12 @@
   }
   &-nem p {
     &::before {
-      content: url(../img/green.jpg);
+      content: url(../img/green.png);
     }
   }
   &-cor p {
     &::before {
-      content: url(../img/yellow.jpg);
+      content: url(../img/yellow.png);
     }
   }
   
@@ -491,7 +491,7 @@
   }
   .portfolio {
     .btn {
-      margin: 5px auto;
+      margin: 3px auto;
     }
     .flex {
       display: block;
