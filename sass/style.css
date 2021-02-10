@@ -38,11 +38,11 @@
 }
 
 .slideLeft {
-  transform: translateX(-50px);
+  transform: translateX(-100px);
 }
 
 .slideRight {
-  transform: translateX(50px);
+  transform: translateX(100px);
 }
 
 .slideBottom {
@@ -475,6 +475,12 @@
   .contact-form th {
     width: 40%;
   }
+  .slideLeft {
+    transform: translateX(-50px);
+  }
+  .slideRight {
+    transform: translateX(50px);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -525,5 +531,11 @@
     width: 90%;
     margin: 40px auto 20px;
     font-size: 0.8rem;
+  }
+  .slideLeft {
+    transform: translateX(-10px);
+  }
+  .slideRight {
+    transform: translateX(10px);
   }
 }

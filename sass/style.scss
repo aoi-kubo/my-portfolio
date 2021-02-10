@@ -36,10 +36,10 @@
 }
 
 .slideLeft {
-  transform: translateX(-50px);
+  transform: translateX(-100px);
 }
 .slideRight {
-  transform: translateX(50px);
+  transform: translateX(100px);
 }
 .slideBottom {
   transform: translateY(300px);
@@ -460,6 +460,12 @@
       width: 40%;
     }
   }
+  .slideLeft {
+    transform: translateX(-50px);
+  }
+  .slideRight {
+    transform: translateX(50px);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -516,5 +522,11 @@
       margin: 40px auto 20px;
       font-size: 0.8rem;
     }
+  }
+  .slideLeft {
+    transform: translateX(-10px);
+  }
+  .slideRight {
+    transform: translateX(10px);
   }
 }
