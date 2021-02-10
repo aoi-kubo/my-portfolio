@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   font-size: 20px;
+  box-sizing: border-box;
 }
 .body.hidden {
   overflow: hidden;
@@ -331,8 +332,7 @@
       content: url(../img/yellow.png);
     }
   }
-  
-  
+
 }
 
 
@@ -452,6 +452,7 @@
       padding: 30px 0;
       &::before {
         left: -25%;
+        transform: scale(1.1);
       }
     }
   }
@@ -501,6 +502,7 @@
     }
     .flex {
       display: block;
+      flex-direction: column;
     }
     &-nem, &-cor {
       padding: 10px 2px;
@@ -511,7 +513,8 @@
     &-nem p, &-cor p {
       transform: scale(0.7);
       &::before {
-        left: -17%;
+        left: -16%;
+        transform: scale(0.9);
       }
     }
   }

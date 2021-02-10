@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   font-size: 20px;
+  box-sizing: border-box;
 }
 
 .body.hidden {
@@ -471,6 +472,7 @@
   }
   .portfolio-nem p::before, .portfolio-cor p::before {
     left: -25%;
+    transform: scale(1.1);
   }
   .contact-form th {
     width: 40%;
@@ -511,6 +513,7 @@
   }
   .portfolio .flex {
     display: block;
+    flex-direction: column;
   }
   .portfolio-nem, .portfolio-cor {
     padding: 10px 2px;
@@ -522,7 +525,8 @@
     transform: scale(0.7);
   }
   .portfolio-nem p::before, .portfolio-cor p::before {
-    left: -17%;
+    left: -16%;
+    transform: scale(0.9);
   }
   .contact {
     text-align: center;
